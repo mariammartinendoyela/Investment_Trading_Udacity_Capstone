@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Predictor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Stock Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="ticker">Ticker Symbol:</label>
+        <input type="text" id="ticker" name="ticker" required>
+        <br>
+        <label for="interval">Interval (days):</label>
+        <input type="number" id="interval" name="interval" required>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
